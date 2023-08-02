@@ -8,33 +8,15 @@ import 'package:trashure/app/modules/home/views/scan_view.dart';
 import 'package:trashure/constant.dart';
 
 class NavbarController extends GetxController {
-  final persistentTabController = PersistentTabController().obs;
+  final currentIndex = 0.obs;
   final List<Widget> screens = [
     HomeView(),
-    ScanView(),
     ProfileView(),
   ].obs;
 
-  final navbaritems = [
-    PersistentBottomNavBarItem(
-      icon: Icon(Icons.home),
-      title: ("Home"),
-      activeColorPrimary: yellow,
-      inactiveColorPrimary: grey,
-    ),
-    PersistentBottomNavBarItem(
-      icon: Icon(Icons.qr_code_scanner_rounded),
-      title: ("Home"),
-      activeColorPrimary: yellow,
-      inactiveColorPrimary: black,
-    ),
-    PersistentBottomNavBarItem(
-      icon: Icon(Icons.perm_identity_rounded),
-      title: ("Home"),
-      activeColorPrimary: yellow,
-      inactiveColorPrimary: grey,
-    ),
-  ].obs;
+  void changePage(int index) {
+    currentIndex.value = index;
+  }
 
   @override
   void onInit() {

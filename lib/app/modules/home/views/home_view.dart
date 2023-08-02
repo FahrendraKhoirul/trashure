@@ -95,15 +95,25 @@ class HomeView extends GetView<HomeController> {
                       runAlignment: WrapAlignment.center,
                       children: [
                         customIconButton(
-                            "assets/icons/icon_donasi.png", "Donasi", () {}),
+                            "assets/icons/icon_donasi.png", "Donasi", () {
+                          Get.toNamed("/donasi");
+                        }),
                         customIconButton(
-                            "assets/icons/icon_lokasi.png", "Drop Off", () {}),
+                            "assets/icons/icon_lokasi.png", "Drop Off", () {
+                          Get.toNamed("/dropoff");
+                        }),
                         customIconButton(
-                            "assets/icons/icon_edukasi.png", "Edukasi", () {}),
+                            "assets/icons/icon_edukasi.png", "Edukasi", () {
+                          Get.toNamed("/edukasi");
+                        }),
+                        customIconButton("assets/icons/icon_aduan.png", "Aduan",
+                            () {
+                          Get.toNamed("/aduan");
+                        }),
                         customIconButton(
-                            "assets/icons/icon_aduan.png", "Aduan", () {}),
-                        customIconButton("assets/icons/icon_komunitas.png",
-                            "Komunitas", () {}),
+                            "assets/icons/icon_komunitas.png", "Komunitas", () {
+                          Get.toNamed("/komunitas");
+                        }),
                       ],
                     ),
                     const SizedBox(

@@ -8,6 +8,8 @@ import '../modules/donasi/add_donasi/bindings/add_donasi_binding.dart';
 import '../modules/donasi/add_donasi/views/add_donasi_view.dart';
 import '../modules/donasi/bindings/donasi_binding.dart';
 import '../modules/donasi/views/donasi_view.dart';
+import '../modules/edukasi/bindings/edukasi_binding.dart';
+import '../modules/edukasi/views/edukasi_view.dart';
 import '../modules/event/add_event/bindings/add_event_binding.dart';
 import '../modules/event/add_event/views/add_event_view.dart';
 import '../modules/event/bindings/event_binding.dart';
@@ -17,6 +19,7 @@ import '../modules/home/views/home_view.dart';
 import '../modules/home/views/navbar_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+
 part 'app_routes.dart';
 
 class AppPages {
@@ -75,6 +78,11 @@ class AppPages {
           binding: AddAduanBinding(),
         ),
       ],
+    ),
+    GetPage(
+      name: _Paths.EDUKASI,
+      page: () => const EdukasiView(),
+      binding: EdukasiBinding(),
     ),
   ];
 }

@@ -31,7 +31,7 @@ var buttonShadow = BoxShadow(
 );
 
 var cardShadow = BoxShadow(
-  color: grey.withOpacity(0.25),
+  color: grey.withOpacity(0.2),
   spreadRadius: 1,
   blurRadius: 2,
   offset: const Offset(0, 1),

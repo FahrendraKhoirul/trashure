@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:trashure/app/modules/home/views/navbar_view.dart';
 
 import '../modules/donasi/bindings/donasi_binding.dart';
 import '../modules/donasi/views/donasi_view.dart';
@@ -18,6 +19,11 @@ class AppPages {
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeView(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.NAVBAR,
+      page: () => const NavbarView(),
       binding: HomeBinding(),
     ),
     GetPage(

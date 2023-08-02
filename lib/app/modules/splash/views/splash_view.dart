@@ -13,7 +13,7 @@ class SplashView extends GetView<SplashController> {
     return Scaffold(
       body: Center(
         child: Animate(
-          effects: [ShimmerEffect()],
+          effects: const [ShimmerEffect()],
           child: Image.asset(
             'assets/icons/logo.png',
             width: 150,

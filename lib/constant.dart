@@ -38,7 +38,7 @@ var cardShadow = BoxShadow(
 );
 
 // TEXT STYLE
-TextStyle customTextSTyle(size, color, weight) {
+TextStyle customTextSTyle(double size, Color color, FontWeight weight) {
   return TextStyle(
     fontSize: size,
     color: color,

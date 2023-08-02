@@ -20,6 +20,5 @@ flutter:
   assets: 
     - assets/images/
     - assets/icons/
-    - assets/fonts/
   uses-material-design: true
 

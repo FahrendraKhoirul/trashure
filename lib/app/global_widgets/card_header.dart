@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:trashure/constant.dart';
 
-Widget cardHeader() {
+Widget cardHeader(
+    String icon, title, desc, buttonText, VoidCallback onPressed) {
   return Container(
     padding: const EdgeInsets.all(mediumPadding),
     decoration: BoxDecoration(
@@ -11,26 +12,23 @@ Widget cardHeader() {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset("assets/icons/icon_donasi.png", width: 60),
-        const SizedBox(width: smallPadding),
+        Image.asset(icon, width: 60),
+        const SizedBox(width: regularPadding),
         Flexible(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Mau berdonasi?",
-                  style: customTextSTyle(18.0, black, FontWeight.w600)),
+              Text(title, style: customTextSTyle(18.0, black, FontWeight.w600)),
               const SizedBox(height: smallPadding),
-              const Text(
-                  "Donasikan barang bekasmu yang masih layak digunakan, banyak diluar sana yang membutuhkan."),
-              const SizedBox(height: mediumPadding),
+              Text(
+                desc,
+                style: customTextSTyle(16.0, grey, FontWeight.w500),
+              ),
+              const SizedBox(height: smallPadding),
               Align(
                 alignment: Alignment.bottomRight,
                 child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Buat Donasi",
-                    style: customTextSTyle(16.0, black, FontWeight.w600),
-                  ),
+                  onPressed: onPressed,
                   style: ElevatedButton.styleFrom(
                       backgroundColor: yellow,
                       elevation: 2,
@@ -40,6 +38,10 @@ Widget cardHeader() {
                       padding: const EdgeInsets.symmetric(
                           horizontal: mediumPadding,
                           vertical: extraSmallPadding)),
+                  child: Text(
+                    buttonText,
+                    style: customTextSTyle(16.0, black, FontWeight.w600),
+                  ),
                 ),
               )
             ],

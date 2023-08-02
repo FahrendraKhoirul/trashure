@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:trashure/app/global_widgets/app_bar.dart';
-import 'package:trashure/app/global_widgets/card_donasi.dart';
+import 'package:trashure/app/global_widgets/card_event.dart';
 import 'package:trashure/app/global_widgets/card_header.dart';
 import 'package:trashure/constant.dart';
 
-import '../controllers/donasi_controller.dart';
+import '../controllers/event_controller.dart';
 
-class DonasiView extends GetView<DonasiController> {
-  const DonasiView({Key? key}) : super(key: key);
+class EventView extends GetView<EventController> {
+  const EventView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: white,
-        appBar: customAppBar("Donasi"),
+        appBar: customAppBar("Event"),
         body: SingleChildScrollView(
           child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -22,15 +22,10 @@ class DonasiView extends GetView<DonasiController> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    cardHeader(
-                        "assets/icons/icon_donasi.png",
-                        "Mau berdonasi?",
-                        "Donasikan barang bekasmu yang masih layak digunakan, banyak diluar sana yang membutuhkan.",
-                        "Buat Donasi",
-                        () {}),
+                    cardHeader("assets/icons/icon_event.png", "Ingin mengadakan event komunitas?", "Buat acara webinar, kerja bakti, volunteer bersama komunitasmu.", "Buat event", (){}),
                     const SizedBox(height: largePadding),
                     Text(
-                      "Donasi yang tersedia",
+                      "Event yang tersedia",
                       style: customTextSTyle(18.0, black, FontWeight.w600),
                     ),
                     ListView.builder(
@@ -41,11 +36,7 @@ class DonasiView extends GetView<DonasiController> {
                             const EdgeInsets.symmetric(vertical: mediumPadding),
                         itemBuilder: (context, index) {
                           return InkWell(
-                            child: cardDonasi(
-                                "https://jualbelilaptop.id/wp-content/uploads/2020/08/unnamed-47.jpg",
-                                "Sofa Bekas",
-                                "9 November 2010",
-                                "Malang"),
+                            child: cardEvent("https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466", "Seribu Sampah", "8 Juli 2023", "09.00 WIB", "Lowokwaru, Malang"),
                             onTap: () {},
                           );
                         })

@@ -25,7 +25,7 @@ const largeRounded = 28.0;
 
 // SHADOW
 var buttonShadow = BoxShadow(
-  color: black.withOpacity(0.2),
+  color: grey.withOpacity(0.1),
   blurRadius: 8,
   offset: const Offset(0, 2),
 );

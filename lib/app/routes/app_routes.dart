@@ -16,6 +16,8 @@ abstract class Routes {
   static const DETAIL_ADUAN = _Paths.ADUAN + _Paths.DETAIL_ADUAN;
   static const DETAIL_DONASI = _Paths.DONASI + _Paths.DETAIL_DONASI;
   static const EDUKASI = _Paths.EDUKASI;
+  static const DETAIL_EDUKASI = _Paths.EDUKASI + _Paths.DETAIL_EDUKASI;
+  static const DETAIL_ARTIKEL = _Paths.EDUKASI + _Paths.DETAIL_ARTIKEL;
 }
 
 abstract class _Paths {
@@ -33,4 +35,6 @@ abstract class _Paths {
   static const DETAIL_ADUAN = '/detail-aduan';
   static const DETAIL_DONASI = '/detail-donasi';
   static const EDUKASI = '/edukasi';
+  static const DETAIL_EDUKASI = '/detail-edukasi';
+  static const DETAIL_ARTIKEL = '/detail-artikel';
 }

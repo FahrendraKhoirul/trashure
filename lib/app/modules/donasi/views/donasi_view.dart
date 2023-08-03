@@ -27,7 +27,9 @@ class DonasiView extends GetView<DonasiController> {
                         "Mau berdonasi?",
                         "Donasikan barang bekasmu yang masih layak digunakan, banyak diluar sana yang membutuhkan.",
                         "Buat Donasi",
-                        () {}),
+                        () {
+                            Get.toNamed("/donasi/add-donasi");
+                        }),
                     const SizedBox(height: largePadding),
                     Text(
                       "Donasi yang tersedia",
@@ -46,7 +48,9 @@ class DonasiView extends GetView<DonasiController> {
                                 "Sofa Bekas",
                                 "9 November 2010",
                                 "Malang"),
-                            onTap: () {},
+                            onTap: () {
+                              Get.toNamed("/donasi/detail-donasi");
+                            },
                           );
                         })
                   ])),

@@ -29,7 +29,7 @@ class EdukasiView extends GetView<EdukasiController> {
             )),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(largePadding),
+            padding: const EdgeInsets.all(largePadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -49,19 +49,33 @@ class EdukasiView extends GetView<EdukasiController> {
                     direction: Axis.horizontal,
                     children: [
                       customIconButton(
-                          "assets/icons/icon_tipe1.png", "PET", () {}),
+                          "assets/icons/icon_tipe1.png", "PET", () {
+                              Get.toNamed("/edukasi/detail-edukasi");
+                          }),
                       customIconButton(
-                          "assets/icons/icon_tipe2.png", "HDPE", () {}),
+                          "assets/icons/icon_tipe2.png", "HDPE", () {
+                              Get.toNamed("/edukasi/detail-edukasi");
+                          }),
                       customIconButton(
-                          "assets/icons/icon_tipe3.png", "PVC", () {}),
+                          "assets/icons/icon_tipe3.png", "PVC", () {
+                              Get.toNamed("/edukasi/detail-edukasi");
+                          }),
                       customIconButton(
-                          "assets/icons/icon_tipe4.png", "LDPE", () {}),
+                          "assets/icons/icon_tipe4.png", "LDPE", () {
+                              Get.toNamed("/edukasi/detail-edukasi");
+                          }),
                       customIconButton(
-                          "assets/icons/icon_tipe5.png", "PP", () {}),
+                          "assets/icons/icon_tipe5.png", "PP", () {
+                              Get.toNamed("/edukasi/detail-edukasi");
+                          }),
                       customIconButton(
-                          "assets/icons/icon_tipe6.png", "PS", () {}),
+                          "assets/icons/icon_tipe6.png", "PS", () {
+                              Get.toNamed("/edukasi/detail-edukasi");
+                          }),
                       customIconButton(
-                          "assets/icons/icon_tipe7.png", "LAINNYA", () {}),
+                          "assets/icons/icon_tipe7.png", "LAINNYA", () {
+                              Get.toNamed("/edukasi/detail-edukasi");
+                          }),
                     ],
                   ),
                 ),
@@ -73,7 +87,9 @@ class EdukasiView extends GetView<EdukasiController> {
                     style: customTextSTyle(14, grey, FontWeight.w400)),
                 const SizedBox(height: smallPadding),
                 cardContent(
-                    onTap: () {},
+                    onTap: () {
+                        Get.toNamed("/edukasi/detail-artikel");
+                    },
                     image:
                         "https://cdn1-production-images-kly.akamaized.net/7WjCCJ6BCDMeQxVUfYh8WjOai6U=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2755430/original/025206600_1552987962-iStock-914826124.jpg",
                     title: "Yuk Kenali Jenis Sampah",
@@ -87,11 +103,16 @@ class EdukasiView extends GetView<EdukasiController> {
                   shrinkWrap: true,
                   itemCount: 10,
                   itemBuilder: (context, index) {
-                    return cardDonasi(
-                        "https://informatika.uin-malang.ac.id/wp-content/uploads/2020/09/opah.jpg",
-                        "Cara Mudah Daur Ulang Plastik",
-                        "asdasdasd",
-                        "asda");
+                    return InkWell(
+                      onTap: () {
+                        Get.toNamed("/edukasi/detail-artikel");
+                      },
+                      child: cardDonasi(
+                          "https://informatika.uin-malang.ac.id/wp-content/uploads/2020/09/opah.jpg",
+                          "Cara Mudah Daur Ulang Plastik",
+                          "asdasdasd",
+                          "asda"),
+                    );
                   },
                 )
               ],

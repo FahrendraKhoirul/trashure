@@ -27,7 +27,9 @@ class AduanView extends GetView<AduanController> {
                         "Punya keluhan?",
                         "Kirim aduanmu perihal penimbunan sampah ilegal hingga kebutuhan infrastruktur sampah.",
                         "Buat aduan",
-                        () {}),
+                        () {
+                            Get.toNamed("/aduan/add-aduan");
+                        }),
                     const SizedBox(height: largePadding),
                     Text(
                       "Daftar aduan",
@@ -46,7 +48,9 @@ class AduanView extends GetView<AduanController> {
                                 "20 April 2023",
                                 "Klojen, Malang",
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ligula ut metus congue commodo sit amet vel mauris.",),
-                            onTap: () {},
+                            onTap: () {
+                              Get.toNamed("/aduan/detail-aduan");
+                            },
                           );
                         })
                   ])),

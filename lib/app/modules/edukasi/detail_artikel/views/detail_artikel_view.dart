@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:trashure/app/global_widgets/app_bar.dart';
-import 'package:trashure/app/global_widgets/card_label.dart';
 import 'package:trashure/constant.dart';
 
-import '../controllers/detail_aduan_controller.dart';
+import '../controllers/detail_artikel_controller.dart';
 
-class DetailAduanView extends GetView<DetailAduanController> {
-  const DetailAduanView({Key? key}) : super(key: key);
+class DetailArtikelView extends GetView<DetailArtikelController> {
+  const DetailArtikelView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +19,6 @@ class DetailAduanView extends GetView<DetailAduanController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                cardLabel(Icons.announcement_outlined, "Aduan"),
-                const SizedBox(height: mediumPadding),
-                Text(
-                  "24 Juli 2023",
-                  style: customTextSTyle(20.0, black, FontWeight.w600),
-                ),
-                const SizedBox(height: regularPadding),
                 Container(
                   height: 255,
                   width: Get.height,
@@ -39,39 +31,41 @@ class DetailAduanView extends GetView<DetailAduanController> {
                   ),
                 ),
                 const SizedBox(height: mediumPadding),
-                Text("Aduan Oleh",
-                    style: customTextSTyle(14.0, grey, FontWeight.w400)),
-                const SizedBox(height: extraSmallPadding),
+                Row(
+                  children: [
+                    Text("25 Juli 2023",
+                        style: customTextSTyle(14.0, grey, FontWeight.w600)),
+                    const SizedBox(width: 8),
+                    Container(
+                      width: 10,
+                      height: 10,
+                      decoration: BoxDecoration(
+                        color: grey,
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Text("baca 3 menit",
+                        style: customTextSTyle(14.0, grey, FontWeight.w600)),
+                  ],
+                ),
+                const SizedBox(height: mediumPadding),
+                Text(
+                  "Cara Mudah Daur Ulang Plastik yang Ada di Rumah",
+                  style: customTextSTyle(20.0, black, FontWeight.w600),
+                ),
+                const SizedBox(height: smallPadding),
                 Row(
                   children: [
                     const Icon(Icons.person_2_outlined, color: black, size: 18),
                     const SizedBox(width: extraSmallPadding),
                     Text(
-                      "Tatang Sutarman",
+                      "Virdita Rahdianti",
                       style: customTextSTyle(14.0, black, FontWeight.w600),
                     )
                   ],
                 ),
-                const SizedBox(height: smallPadding),
-                Text("Lokasi",
-                    style: customTextSTyle(14.0, grey, FontWeight.w400)),
-                const SizedBox(height: extraSmallPadding),
-                Row(
-                  children: [
-                    const Icon(Icons.location_on, color: black, size: 18),
-                    const SizedBox(width: extraSmallPadding),
-                    Text(
-                      "Lowokwaru, Malang",
-                      style: customTextSTyle(14.0, black, FontWeight.w600),
-                    )
-                  ],
-                ),
-                const SizedBox(height: mediumPadding),
-                Text(
-                  "Tentang Aduan",
-                  style: customTextSTyle(16.0, black, FontWeight.w600),
-                ),
-                const SizedBox(height: smallPadding),
+                const SizedBox(height: regularPadding),
                 Text(
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sem nisl. Curabitur est libero, lacinia at urna in, porta laoreet purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc dignissim nisl mi, ac ullamcorper lectus vulputate vel. Nulla facilisi. ",
                   style: customTextSTyle(14.0, black, FontWeight.w400),

@@ -13,6 +13,10 @@ import '../modules/donasi/detail_donasi/bindings/detail_donasi_binding.dart';
 import '../modules/donasi/detail_donasi/views/detail_donasi_view.dart';
 import '../modules/donasi/views/donasi_view.dart';
 import '../modules/edukasi/bindings/edukasi_binding.dart';
+import '../modules/edukasi/detail_artikel/bindings/detail_artikel_binding.dart';
+import '../modules/edukasi/detail_artikel/views/detail_artikel_view.dart';
+import '../modules/edukasi/detail_edukasi/bindings/detail_edukasi_binding.dart';
+import '../modules/edukasi/detail_edukasi/views/detail_edukasi_view.dart';
 import '../modules/edukasi/views/edukasi_view.dart';
 import '../modules/event/add_event/bindings/add_event_binding.dart';
 import '../modules/event/add_event/views/add_event_view.dart';
@@ -31,7 +35,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.DETAIL_DONASI;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -104,6 +108,18 @@ class AppPages {
       name: _Paths.EDUKASI,
       page: () => const EdukasiView(),
       binding: EdukasiBinding(),
+      children: [
+        GetPage(
+          name: _Paths.DETAIL_EDUKASI,
+          page: () => const DetailEdukasiView(),
+          binding: DetailEdukasiBinding(),
+        ),
+        GetPage(
+          name: _Paths.DETAIL_ARTIKEL,
+          page: () => const DetailArtikelView(),
+          binding: DetailArtikelBinding(),
+        ),
+      ],
     ),
   ];
 }

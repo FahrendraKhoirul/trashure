@@ -12,6 +12,8 @@ import '../modules/donasi/bindings/donasi_binding.dart';
 import '../modules/donasi/detail_donasi/bindings/detail_donasi_binding.dart';
 import '../modules/donasi/detail_donasi/views/detail_donasi_view.dart';
 import '../modules/donasi/views/donasi_view.dart';
+import '../modules/edukasi/bindings/edukasi_binding.dart';
+import '../modules/edukasi/views/edukasi_view.dart';
 import '../modules/event/add_event/bindings/add_event_binding.dart';
 import '../modules/event/add_event/views/add_event_view.dart';
 import '../modules/event/bindings/event_binding.dart';
@@ -97,6 +99,11 @@ class AppPages {
           binding: DetailAduanBinding(),
         ),
       ],
+    ),
+    GetPage(
+      name: _Paths.EDUKASI,
+      page: () => const EdukasiView(),
+      binding: EdukasiBinding(),
     ),
   ];
 }

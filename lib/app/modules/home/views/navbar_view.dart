@@ -3,44 +3,48 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:trashure/app/modules/home/controllers/navbar_controller.dart';
+import 'package:trashure/constant.dart';
 
 class NavbarView extends GetView<NavbarController> {
   const NavbarView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PersistentTabView(
-      context,
-      controller: controller.persistentTabController.value,
-      screens: controller.screens,
-      items: controller.navbaritems,
-
-      confineInSafeArea: true,
-      backgroundColor: Colors.white, // Default is Colors.white.
-      handleAndroidBackButtonPress: true, // Default is true.
-      resizeToAvoidBottomInset:
-          true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
-      stateManagement: true, // Default is true.
-      hideNavigationBarWhenKeyboardShows:
-          true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
-      decoration: NavBarDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        colorBehindNavBar: Colors.white,
+    return Scaffold(
+      body: Obx(() => controller.screens[controller.currentIndex.value]),
+      bottomNavigationBar: Obx(
+        () => BottomNavigationBar(
+          backgroundColor: white,
+          elevation: 2,
+          iconSize: 30,
+          showUnselectedLabels: false,
+          selectedIconTheme: IconThemeData(color: yellow),
+          selectedLabelStyle: customTextSTyle(14, yellow, FontWeight.normal),
+          unselectedIconTheme: IconThemeData(color: lightGrey),
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_rounded,
+              ),
+              label: 'Beranda',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profil',
+            ),
+          ],
+          currentIndex: controller.currentIndex.value,
+          selectedItemColor: Colors.amber[800],
+          onTap: (index) {
+            controller.changePage(index);
+          },
+        ),
       ),
-      popAllScreensOnTapOfSelectedTab: true,
-      popActionScreens: PopActionScreensType.all,
-      itemAnimationProperties: const ItemAnimationProperties(
-        // Navigation Bar's items animation properties.
-        duration: Duration(milliseconds: 200),
-        curve: Curves.ease,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+        backgroundColor: yellow,
       ),
-      screenTransitionAnimation: const ScreenTransitionAnimation(
-        // Screen transition animation on change of selected tab.
-        animateTabTransition: true,
-        curve: Curves.ease,
-        duration: Duration(milliseconds: 200),
-      ),
-      navBarStyle:
-          NavBarStyle.style15, // Choose the nav bar style with this property.
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

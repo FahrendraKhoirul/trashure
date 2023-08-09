@@ -40,9 +40,11 @@ class NavbarView extends GetView<NavbarController> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+        onPressed: () {
+          controller.getImage();
+        },
         backgroundColor: yellow,
+        child: const Icon(Icons.camera_alt_outlined, color: black),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );

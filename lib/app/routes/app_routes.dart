@@ -13,6 +13,7 @@ abstract class Routes {
   static const ADD_EVENT = _Paths.EVENT + _Paths.ADD_EVENT;
   static const ADD_ADUAN = _Paths.ADUAN + _Paths.ADD_ADUAN;
   static const EDUKASI = _Paths.EDUKASI;
+  static const WASTE_CLASSIFICATION = _Paths.WASTE_CLASSIFICATION;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const ADD_EVENT = '/add-event';
   static const ADD_ADUAN = '/add-aduan';
   static const EDUKASI = '/edukasi';
+  static const WASTE_CLASSIFICATION = '/waste-classification';
 }

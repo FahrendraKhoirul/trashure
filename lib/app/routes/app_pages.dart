@@ -19,6 +19,8 @@ import '../modules/home/views/home_view.dart';
 import '../modules/home/views/navbar_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/wasteClassification/bindings/waste_classification_binding.dart';
+import '../modules/wasteClassification/views/waste_classification_view.dart';
 
 part 'app_routes.dart';
 
@@ -83,6 +85,11 @@ class AppPages {
       name: _Paths.EDUKASI,
       page: () => const EdukasiView(),
       binding: EdukasiBinding(),
+    ),
+    GetPage(
+      name: _Paths.WASTE_CLASSIFICATION,
+      page: () => const WasteClassificationView(),
+      binding: WasteClassificationBinding(),
     ),
   ];
 }

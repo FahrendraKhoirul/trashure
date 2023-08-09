@@ -16,6 +16,7 @@ abstract class Routes {
   static const DETAIL_ADUAN = _Paths.ADUAN + _Paths.DETAIL_ADUAN;
   static const DETAIL_DONASI = _Paths.DONASI + _Paths.DETAIL_DONASI;
   static const EDUKASI = _Paths.EDUKASI;
+  static const WASTE_CLASSIFICATION = _Paths.WASTE_CLASSIFICATION;
 }
 
 abstract class _Paths {
@@ -33,4 +34,5 @@ abstract class _Paths {
   static const DETAIL_ADUAN = '/detail-aduan';
   static const DETAIL_DONASI = '/detail-donasi';
   static const EDUKASI = '/edukasi';
+  static const WASTE_CLASSIFICATION = '/waste-classification';
 }

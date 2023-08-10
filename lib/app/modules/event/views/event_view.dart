@@ -14,7 +14,7 @@ class EventView extends GetView<EventController> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: white,
-        appBar: customAppBar("Event"),
+        appBar: customAppBar("Event Komunitas"),
         body: SingleChildScrollView(
           child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -22,8 +22,12 @@ class EventView extends GetView<EventController> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    cardHeader("assets/icons/icon_event.png", "Ingin mengadakan event komunitas?", "Buat acara webinar, kerja bakti, volunteer bersama komunitasmu.", "Buat event", (){
-                        Get.toNamed("/event/add-event");
+                    cardHeader(
+                        "assets/icons/icon_event.png",
+                        "Ingin mengadakan event komunitas?",
+                        "Buat acara webinar, kerja bakti, volunteer bersama komunitasmu.",
+                        "Buat event", () {
+                      Get.toNamed("/event/add-event");
                     }),
                     const SizedBox(height: largePadding),
                     Text(
@@ -38,7 +42,12 @@ class EventView extends GetView<EventController> {
                             const EdgeInsets.symmetric(vertical: mediumPadding),
                         itemBuilder: (context, index) {
                           return InkWell(
-                            child: cardEvent("https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466", "Seribu Sampah", "8 Juli 2023", "09.00 WIB", "Lowokwaru, Malang"),
+                            child: cardEvent(
+                                "https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466",
+                                "Seribu Sampah",
+                                "8 Juli 2023",
+                                "09.00 WIB",
+                                "Lowokwaru, Malang"),
                             onTap: () {
                               Get.toNamed("/event/detail-event");
                             },

@@ -23,7 +23,7 @@ class DetailAduanView extends GetView<DetailAduanController> {
                 cardLabel(Icons.announcement_outlined, "Aduan"),
                 const SizedBox(height: mediumPadding),
                 Text(
-                  "24 Juli 2023",
+                  "20 April 2023",
                   style: customTextSTyle(20.0, black, FontWeight.w600),
                 ),
                 const SizedBox(height: regularPadding),
@@ -34,7 +34,7 @@ class DetailAduanView extends GetView<DetailAduanController> {
                     borderRadius: BorderRadius.circular(largeRounded),
                     image: const DecorationImage(
                         image: NetworkImage(
-                            "https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466"),
+                            "https://media.npr.org/assets/img/2012/10/28/trash2-614f006a7e1d70a7fee7c5d5a92788107dd0c8a7.jpg"),
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -61,7 +61,7 @@ class DetailAduanView extends GetView<DetailAduanController> {
                     const Icon(Icons.location_on, color: black, size: 18),
                     const SizedBox(width: extraSmallPadding),
                     Text(
-                      "Lowokwaru, Malang",
+                      "Klojen, Malang",
                       style: customTextSTyle(14.0, black, FontWeight.w600),
                     )
                   ],

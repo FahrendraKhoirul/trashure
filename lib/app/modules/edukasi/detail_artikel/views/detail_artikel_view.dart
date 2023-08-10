@@ -26,7 +26,7 @@ class DetailArtikelView extends GetView<DetailArtikelController> {
                     borderRadius: BorderRadius.circular(largeRounded),
                     image: const DecorationImage(
                         image: NetworkImage(
-                            "https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466"),
+                            "https://cdn1-production-images-kly.akamaized.net/7WjCCJ6BCDMeQxVUfYh8WjOai6U=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2755430/original/025206600_1552987962-iStock-914826124.jpg"),
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -51,7 +51,7 @@ class DetailArtikelView extends GetView<DetailArtikelController> {
                 ),
                 const SizedBox(height: mediumPadding),
                 Text(
-                  "Cara Mudah Daur Ulang Plastik yang Ada di Rumah",
+                  "Yuk Kenali Jenis Sampah",
                   style: customTextSTyle(20.0, black, FontWeight.w600),
                 ),
                 const SizedBox(height: smallPadding),
@@ -67,7 +67,7 @@ class DetailArtikelView extends GetView<DetailArtikelController> {
                 ),
                 const SizedBox(height: regularPadding),
                 Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sem nisl. Curabitur est libero, lacinia at urna in, porta laoreet purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc dignissim nisl mi, ac ullamcorper lectus vulputate vel. Nulla facilisi. ",
+                  "Salah satu solusi untuk mengatasi masalah ini adalah dengan memilih tempat sampah yang sesuai dengan jenis sampah. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sem nisl. Curabitur est libero, lacinia at urna in, porta laoreet purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc dignissim nisl mi, ac ullamcorper lectus vulputate vel. Nulla facilisi. ",
                   style: customTextSTyle(14.0, black, FontWeight.w400),
                   textAlign: TextAlign.justify,
                 )

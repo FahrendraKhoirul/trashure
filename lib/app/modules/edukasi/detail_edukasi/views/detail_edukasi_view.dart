@@ -34,7 +34,7 @@ class DetailEdukasiView extends GetView<DetailEdukasiController> {
                     borderRadius: BorderRadius.circular(largeRounded),
                     image: const DecorationImage(
                         image: NetworkImage(
-                            "https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466"),
+                            "https://pict.sindonews.net/dyn/620/pena/news/2021/03/17/34/367794/plastik-berbahan-dasar-pet-memiliki-nilai-ekonomi-tinggi-ggo.jpeg"),
                         fit: BoxFit.cover),
                   ),
                 ),

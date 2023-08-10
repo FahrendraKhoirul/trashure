@@ -26,10 +26,9 @@ class DonasiView extends GetView<DonasiController> {
                         "assets/icons/icon_donasi.png",
                         "Mau berdonasi?",
                         "Donasikan barang bekasmu yang masih layak digunakan, banyak diluar sana yang membutuhkan.",
-                        "Buat Donasi",
-                        () {
-                            Get.toNamed("/donasi/add-donasi");
-                        }),
+                        "Buat Donasi", () {
+                      Get.toNamed("/donasi/add-donasi");
+                    }),
                     const SizedBox(height: largePadding),
                     Text(
                       "Donasi yang tersedia",
@@ -46,8 +45,8 @@ class DonasiView extends GetView<DonasiController> {
                             child: cardDonasi(
                                 "https://jualbelilaptop.id/wp-content/uploads/2020/08/unnamed-47.jpg",
                                 "Sofa Bekas",
-                                "9 November 2010",
-                                "Malang"),
+                                "9 November 2022",
+                                "Lowokwaru, Malang"),
                             onTap: () {
                               Get.toNamed("/donasi/detail-donasi");
                             },

@@ -28,7 +28,9 @@ class HomeView extends GetView<HomeController> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // make text date now from datetime
+                  const SizedBox(
+                    height: regularPadding,
+                  ),
                   Animate(
                     effects: const [ShimmerEffect()],
                     child: Image.asset(
@@ -57,7 +59,6 @@ class HomeView extends GetView<HomeController> {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
-                          // width: MediaQuery.of(context).size.width,
                           margin: const EdgeInsets.symmetric(horizontal: 6.0),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16),
@@ -116,7 +117,7 @@ class HomeView extends GetView<HomeController> {
                           customIconButton(
                               "assets/icons/icon_komunitas.png", "Komunitas",
                               () {
-                            Get.toNamed("/komunitas");
+                            Get.toNamed("/event");
                           }),
                         ],
                       ),

@@ -48,34 +48,32 @@ class EdukasiView extends GetView<EdukasiController> {
                     runSpacing: smallPadding,
                     direction: Axis.horizontal,
                     children: [
-                      customIconButton(
-                          "assets/icons/icon_tipe1.png", "PET", () {
-                              Get.toNamed("/edukasi/detail-edukasi");
-                          }),
-                      customIconButton(
-                          "assets/icons/icon_tipe2.png", "HDPE", () {
-                              Get.toNamed("/edukasi/detail-edukasi");
-                          }),
-                      customIconButton(
-                          "assets/icons/icon_tipe3.png", "PVC", () {
-                              Get.toNamed("/edukasi/detail-edukasi");
-                          }),
-                      customIconButton(
-                          "assets/icons/icon_tipe4.png", "LDPE", () {
-                              Get.toNamed("/edukasi/detail-edukasi");
-                          }),
-                      customIconButton(
-                          "assets/icons/icon_tipe5.png", "PP", () {
-                              Get.toNamed("/edukasi/detail-edukasi");
-                          }),
-                      customIconButton(
-                          "assets/icons/icon_tipe6.png", "PS", () {
-                              Get.toNamed("/edukasi/detail-edukasi");
-                          }),
-                      customIconButton(
-                          "assets/icons/icon_tipe7.png", "LAINNYA", () {
-                              Get.toNamed("/edukasi/detail-edukasi");
-                          }),
+                      customIconButton("assets/icons/icon_tipe1.png", "PET",
+                          () {
+                        Get.toNamed("/edukasi/detail-edukasi");
+                      }),
+                      customIconButton("assets/icons/icon_tipe2.png", "HDPE",
+                          () {
+                        Get.toNamed("/edukasi/detail-edukasi");
+                      }),
+                      customIconButton("assets/icons/icon_tipe3.png", "PVC",
+                          () {
+                        Get.toNamed("/edukasi/detail-edukasi");
+                      }),
+                      customIconButton("assets/icons/icon_tipe4.png", "LDPE",
+                          () {
+                        Get.toNamed("/edukasi/detail-edukasi");
+                      }),
+                      customIconButton("assets/icons/icon_tipe5.png", "PP", () {
+                        Get.toNamed("/edukasi/detail-edukasi");
+                      }),
+                      customIconButton("assets/icons/icon_tipe6.png", "PS", () {
+                        Get.toNamed("/edukasi/detail-edukasi");
+                      }),
+                      customIconButton("assets/icons/icon_tipe7.png", "LAINNYA",
+                          () {
+                        Get.toNamed("/edukasi/detail-edukasi");
+                      }),
                     ],
                   ),
                 ),
@@ -88,7 +86,7 @@ class EdukasiView extends GetView<EdukasiController> {
                 const SizedBox(height: smallPadding),
                 cardContent(
                     onTap: () {
-                        Get.toNamed("/edukasi/detail-artikel");
+                      Get.toNamed("/edukasi/detail-artikel");
                     },
                     image:
                         "https://cdn1-production-images-kly.akamaized.net/7WjCCJ6BCDMeQxVUfYh8WjOai6U=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2755430/original/025206600_1552987962-iStock-914826124.jpg",
@@ -110,8 +108,8 @@ class EdukasiView extends GetView<EdukasiController> {
                       child: cardDonasi(
                           "https://informatika.uin-malang.ac.id/wp-content/uploads/2020/09/opah.jpg",
                           "Cara Mudah Daur Ulang Plastik",
-                          "asdasdasd",
-                          "asda"),
+                          "26 Juli 2023",
+                          "Yana Yuliyanti"),
                     );
                   },
                 )

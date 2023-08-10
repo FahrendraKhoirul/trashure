@@ -30,16 +30,21 @@ class DetailDonasiView extends GetView<DetailDonasiController> {
                     borderRadius: BorderRadius.circular(largeRounded),
                     image: const DecorationImage(
                         image: NetworkImage(
-                            "https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466"),
+                            "https://jualbelilaptop.id/wp-content/uploads/2020/08/unnamed-47.jpg"),
                         fit: BoxFit.cover),
                   ),
                 ),
                 const SizedBox(height: largePadding),
                 Text(
-                  "Sofa Bekas Kebenaran",
+                  "Sofa Bekas",
                   style: customTextSTyle(20.0, black, FontWeight.w600),
                 ),
-                const SizedBox(height: regularPadding),
+                const SizedBox(height: smallPadding),
+                Text(
+                  "9 November 2022",
+                  style: customTextSTyle(16.0, grey, FontWeight.w600),
+                ),
+                const SizedBox(height: mediumPadding),
                 cardListDetail(Icons.call_outlined, "+6289123987456"),
                 cardListDetail(Icons.location_on, "Lowokwaru, Malang"),
                 const SizedBox(height: smallPadding),

@@ -103,7 +103,7 @@ class HomeView extends GetView<HomeController> {
                           }),
                           customIconButton(
                               "assets/icons/icon_lokasi.png", "Drop Off", () {
-                            Get.toNamed("/dropoff");
+                            Get.toNamed("/location");
                           }),
                           customIconButton(
                               "assets/icons/icon_edukasi.png", "Edukasi", () {

@@ -99,7 +99,7 @@ class EdukasiView extends GetView<EdukasiController> {
                   height: smallPadding,
                 ),
                 ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: 10,
                   itemBuilder: (context, index) {

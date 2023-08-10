@@ -18,6 +18,7 @@ abstract class Routes {
   static const EDUKASI = _Paths.EDUKASI;
   static const DETAIL_EDUKASI = _Paths.EDUKASI + _Paths.DETAIL_EDUKASI;
   static const DETAIL_ARTIKEL = _Paths.EDUKASI + _Paths.DETAIL_ARTIKEL;
+  static const LOCATION = _Paths.LOCATION;
 }
 
 abstract class _Paths {
@@ -37,4 +38,5 @@ abstract class _Paths {
   static const EDUKASI = '/edukasi';
   static const DETAIL_EDUKASI = '/detail-edukasi';
   static const DETAIL_ARTIKEL = '/detail-artikel';
+  static const LOCATION = '/location';
 }

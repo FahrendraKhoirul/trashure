@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
 
-class SplashController extends GetxController {
+class RegisterController extends GetxController {
+  //TODO: Implement RegisterController
+
+  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -16,9 +19,5 @@ class SplashController extends GetxController {
     super.onClose();
   }
 
-  void endScreen() {
-    Future.delayed(const Duration(seconds: 4), () {
-      Get.offAllNamed("/login");
-    });
-  }
+  void increment() => count.value++;
 }

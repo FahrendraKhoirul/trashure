@@ -67,7 +67,9 @@ class ProfileView extends GetView<ProfileController> {
               const SizedBox(height: mediumPadding),
               // button with shadow
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                Get.toNamed("/login");
+                },
                 child: Container(
                     padding: const EdgeInsets.all(regularPadding),
                     width: Get.width,

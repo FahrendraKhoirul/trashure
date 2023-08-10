@@ -28,7 +28,9 @@ class HomeView extends GetView<HomeController> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // make text date now from datetime
+                  const SizedBox(
+                    height: regularPadding,
+                  ),
                   Animate(
                     effects: const [ShimmerEffect()],
                     child: Image.asset(
@@ -57,7 +59,6 @@ class HomeView extends GetView<HomeController> {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
-                          // width: MediaQuery.of(context).size.width,
                           margin: const EdgeInsets.symmetric(horizontal: 6.0),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16),
@@ -89,32 +90,37 @@ class HomeView extends GetView<HomeController> {
                     const SizedBox(
                       height: mediumPadding,
                     ),
-                    Wrap(
-                      spacing: mediumPadding,
-                      alignment: WrapAlignment.spaceEvenly,
-                      runAlignment: WrapAlignment.center,
-                      children: [
-                        customIconButton(
-                            "assets/icons/icon_donasi.png", "Donasi", () {
-                          Get.toNamed("/donasi");
-                        }),
-                        customIconButton(
-                            "assets/icons/icon_lokasi.png", "Drop Off", () {
-                          Get.toNamed("/dropoff");
-                        }),
-                        customIconButton(
-                            "assets/icons/icon_edukasi.png", "Edukasi", () {
-                          Get.toNamed("/edukasi");
-                        }),
-                        customIconButton("assets/icons/icon_aduan.png", "Aduan",
-                            () {
-                          Get.toNamed("/aduan");
-                        }),
-                        customIconButton(
-                            "assets/icons/icon_komunitas.png", "Komunitas", () {
-                          Get.toNamed("/komunitas");
-                        }),
-                      ],
+                    SizedBox(
+                      width: Get.width,
+                      child: Wrap(
+                        spacing: mediumPadding,
+                        runSpacing: mediumPadding,
+                        alignment: WrapAlignment.spaceBetween,
+                        runAlignment: WrapAlignment.center,
+                        children: [
+                          customIconButton(
+                              "assets/icons/icon_donasi.png", "Donasi", () {
+                            Get.toNamed("/donasi");
+                          }),
+                          customIconButton(
+                              "assets/icons/icon_lokasi.png", "Drop Off", () {
+                            Get.toNamed("/location");
+                          }),
+                          customIconButton(
+                              "assets/icons/icon_edukasi.png", "Edukasi", () {
+                            Get.toNamed("/edukasi");
+                          }),
+                          customIconButton(
+                              "assets/icons/icon_aduan.png", "Aduan", () {
+                            Get.toNamed("/aduan");
+                          }),
+                          customIconButton(
+                              "assets/icons/icon_komunitas.png", "Komunitas",
+                              () {
+                            Get.toNamed("/event");
+                          }),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: mediumPadding,

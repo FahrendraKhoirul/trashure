@@ -30,7 +30,7 @@ class AddAduanView extends GetView<AddAduanController> {
                       borderRadius: BorderRadius.circular(largeRounded),
                       image: const DecorationImage(
                           image: NetworkImage(
-                              "https://jualbelilaptop.id/wp-content/uploads/2020/08/unnamed-47.jpg"),
+                              "https://media.npr.org/assets/img/2012/10/28/trash2-614f006a7e1d70a7fee7c5d5a92788107dd0c8a7.jpg"),
                           fit: BoxFit.cover)),
                 ),
                 const SizedBox(height: regularPadding),

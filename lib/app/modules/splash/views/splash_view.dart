@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:get/get.dart';
+import 'package:trashure/constant.dart';
 
 import '../controllers/splash_controller.dart';
 
@@ -11,6 +12,7 @@ class SplashView extends GetView<SplashController> {
   Widget build(BuildContext context) {
     controller.endScreen();
     return Scaffold(
+      backgroundColor: white,
       body: Center(
         child: Animate(
           effects: const [ShimmerEffect()],

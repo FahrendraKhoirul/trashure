@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:trashure/app/modules/home/controllers/navbar_controller.dart';
 import 'package:trashure/constant.dart';
 
@@ -17,9 +16,9 @@ class NavbarView extends GetView<NavbarController> {
           elevation: 2,
           iconSize: 30,
           showUnselectedLabels: false,
-          selectedIconTheme: IconThemeData(color: yellow),
+          selectedIconTheme: const IconThemeData(color: yellow),
           selectedLabelStyle: customTextSTyle(14, yellow, FontWeight.normal),
-          unselectedIconTheme: IconThemeData(color: lightGrey),
+          unselectedIconTheme: const IconThemeData(color: lightGrey),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(
@@ -33,7 +32,7 @@ class NavbarView extends GetView<NavbarController> {
             ),
           ],
           currentIndex: controller.currentIndex.value,
-          selectedItemColor: Colors.amber[800],
+          selectedItemColor: yellow,
           onTap: (index) {
             controller.changePage(index);
           },

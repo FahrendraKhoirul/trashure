@@ -29,7 +29,7 @@ class AddEventView extends GetView<AddEventController> {
                       borderRadius: BorderRadius.circular(largeRounded),
                       image: const DecorationImage(
                           image: NetworkImage(
-                              "https://jualbelilaptop.id/wp-content/uploads/2020/08/unnamed-47.jpg"),
+                              "https://www.rd.com/wp-content/uploads/2020/03/GettyImages-1147902353-scaled.jpg?resize=700,466"),
                           fit: BoxFit.cover)),
                 ),
                 const SizedBox(height: regularPadding),

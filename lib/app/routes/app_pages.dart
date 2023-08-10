@@ -13,6 +13,10 @@ import '../modules/donasi/detail_donasi/bindings/detail_donasi_binding.dart';
 import '../modules/donasi/detail_donasi/views/detail_donasi_view.dart';
 import '../modules/donasi/views/donasi_view.dart';
 import '../modules/edukasi/bindings/edukasi_binding.dart';
+import '../modules/edukasi/detail_artikel/bindings/detail_artikel_binding.dart';
+import '../modules/edukasi/detail_artikel/views/detail_artikel_view.dart';
+import '../modules/edukasi/detail_edukasi/bindings/detail_edukasi_binding.dart';
+import '../modules/edukasi/detail_edukasi/views/detail_edukasi_view.dart';
 import '../modules/edukasi/views/edukasi_view.dart';
 import '../modules/event/add_event/bindings/add_event_binding.dart';
 import '../modules/event/add_event/views/add_event_view.dart';
@@ -23,6 +27,8 @@ import '../modules/event/views/event_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/navbar_view.dart';
+import '../modules/location/bindings/location_binding.dart';
+import '../modules/location/views/location_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 import '../modules/wasteClassification/bindings/waste_classification_binding.dart';
@@ -33,7 +39,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.DETAIL_DONASI;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -106,6 +112,23 @@ class AppPages {
       name: _Paths.EDUKASI,
       page: () => const EdukasiView(),
       binding: EdukasiBinding(),
+      children: [
+        GetPage(
+          name: _Paths.DETAIL_EDUKASI,
+          page: () => const DetailEdukasiView(),
+          binding: DetailEdukasiBinding(),
+        ),
+        GetPage(
+          name: _Paths.DETAIL_ARTIKEL,
+          page: () => const DetailArtikelView(),
+          binding: DetailArtikelBinding(),
+        ),
+      ],
+    ),
+    GetPage(
+      name: _Paths.LOCATION,
+      page: () => const LocationView(),
+      binding: LocationBinding(),
     ),
     GetPage(
       name: _Paths.WASTE_CLASSIFICATION,

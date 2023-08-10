@@ -20,6 +20,9 @@ abstract class Routes {
   static const DETAIL_ARTIKEL = _Paths.EDUKASI + _Paths.DETAIL_ARTIKEL;
   static const LOCATION = _Paths.LOCATION;
   static const WASTE_CLASSIFICATION = _Paths.WASTE_CLASSIFICATION;
+  static const AUTHENTICATION = _Paths.AUTHENTICATION;
+  static const LOGIN = _Paths.LOGIN;
+  static const REGISTER = _Paths.REGISTER;
 }
 
 abstract class _Paths {
@@ -41,4 +44,7 @@ abstract class _Paths {
   static const DETAIL_ARTIKEL = '/detail-artikel';
   static const LOCATION = '/location';
   static const WASTE_CLASSIFICATION = '/waste-classification';
+  static const AUTHENTICATION = '/authentication';
+  static const LOGIN = '/login';
+  static const REGISTER = '/register';
 }

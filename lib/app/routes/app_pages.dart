@@ -29,6 +29,10 @@ import '../modules/home/views/home_view.dart';
 import '../modules/home/views/navbar_view.dart';
 import '../modules/location/bindings/location_binding.dart';
 import '../modules/location/views/location_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
+import '../modules/register/bindings/register_binding.dart';
+import '../modules/register/views/register_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 import '../modules/wasteClassification/bindings/waste_classification_binding.dart';
@@ -134,6 +138,16 @@ class AppPages {
       name: _Paths.WASTE_CLASSIFICATION,
       page: () => const WasteClassificationView(),
       binding: WasteClassificationBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER,
+      page: () => const RegisterView(),
+      binding: RegisterBinding(),
     ),
   ];
 }

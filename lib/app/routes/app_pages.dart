@@ -31,6 +31,8 @@ import '../modules/location/bindings/location_binding.dart';
 import '../modules/location/views/location_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/wasteClassification/bindings/waste_classification_binding.dart';
+import '../modules/wasteClassification/views/waste_classification_view.dart';
 
 part 'app_routes.dart';
 
@@ -127,6 +129,11 @@ class AppPages {
       name: _Paths.LOCATION,
       page: () => const LocationView(),
       binding: LocationBinding(),
+    ),
+    GetPage(
+      name: _Paths.WASTE_CLASSIFICATION,
+      page: () => const WasteClassificationView(),
+      binding: WasteClassificationBinding(),
     ),
   ];
 }
